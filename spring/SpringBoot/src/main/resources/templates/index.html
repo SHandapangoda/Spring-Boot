@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pharmacy Inventory</title>
+</head>
+<body>
+<div align="center">
+    <h1>Pharmacy List</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+
+            <th>
+                Manufacture
+            </th>
+            <th>
+                Expire
+            </th>
+            <th>
+                Quantity
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pharmacy : ${listInventory}">
+            <td th:text="${inventory.name}"></td>
+            <td th:text="${inventory.manufacture}"></td>
+            <td th:text="${inventory.expire}"></td>
+            <td th:text="${inventory.quantity}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
